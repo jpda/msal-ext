@@ -17,7 +17,7 @@ namespace _425show.Msal.Extensions
 
         private X509Store GetCertificateStore()
         {
-            var s = new X509Store(Enum.Parse<StoreName>(_config.Store.Name), Enum.Parse<StoreLocation>(_config.Store.Scope));
+            var s = new X509Store((StoreName)Enum.Parse(typeof(StoreName), _config.Store.Name), (StoreLocation)Enum.Parse(typeof(StoreLocation), _config.Store.Scope));
             if (System.Environment.OSVersion.Platform == PlatformID.Unix)
             {
                 s.Open(OpenFlags.ReadWrite);
