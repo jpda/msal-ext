@@ -5,15 +5,13 @@
     <Authors>jpda</Authors>
     <PackageId>425show.Msal.Extensions</PackageId>
     <Company>425show</Company>
-    <VersionPrefix>0.1.0</VersionPrefix>
+    <PackageDescription>A set of extensions to msal-net</PackageDescription>
+    <RepositoryUrl>https://github.com/jpda/msal-ext</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <VersionPrefix>0.1.0.3</VersionPrefix>
     <VersionSuffix>alpha</VersionSuffix>
   </PropertyGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
-    <PackageReference Include="Microsoft.Identity.Client" Version="4.*" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="5.*" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="5.*" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+  <ItemGroup>
     <PackageReference Include="Microsoft.Identity.Client" Version="4.*" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.*" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.*" />
